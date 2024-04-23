@@ -1,0 +1,139 @@
+body {
+    background-color: rgb(245, 245, 245);
+
+    .container{
+        text-align: center;
+        &_post{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            article{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                gap: 10px;
+                border: 1px solid black;
+                padding-bottom: 20px;
+                margin: 30px;
+                border-radius: 5px;
+
+                h2{
+                    font-size: 26px;
+                }
+            }
+        }
+        &_post-admin{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            .table{
+                display: table;
+                border-collapse: collapse; // permet de faire exister les border et les utiliser.
+                box-shadow: 0 0 1.5rem gray;
+                
+                .my_row{
+                    display: table-row;
+                    border-bottom: 1px solid rgb(92, 92, 92);
+                    border-radius: 5px;
+                    .cell{
+                        display: table-cell;
+                        padding: 1rem;
+                        // border: 1px solid rgb(92, 92, 92);
+                    }
+
+                    &:last-of-type{
+                        border-width: 0;
+                    }
+                }
+            }
+            button{
+                padding: 10px;
+                background-color: gray;
+                margin-top: 50px;
+                border: 1px solid gray;
+                border-radius: 5px;
+                a{
+                color: white;
+                text-decoration: none;
+                }
+            }
+        }
+        &_form{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            form{
+                width: 550px;
+                height: 750px;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                gap: 50px;
+                align-items: center;
+                border-radius: 5px;
+                background-color: white;
+                box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.397);
+                
+                label{
+                    display: none;
+                    // &:last-child{
+                    //     display: block;
+                    // }
+                    &:first-child{
+                        display: block;
+                    }
+                }
+
+                input, textarea{
+                    display: flex;
+                    justify-content: center;
+                    align-items: flex-end;
+                    flex-direction: column;
+                    border-left: 0;
+                    border-right: 0;
+                    border-top: 0;
+                    border-bottom: 2px solid black;
+                    width: 250px;
+                    padding: 10px;
+            
+                    &:focus{
+                        outline: none;
+                    }
+                }
+                button{
+                    width: 80px;
+                    height: 80px;
+                    background-color: rgba(151, 151, 149, 0.945);
+                    color: white;
+                    border: none;
+                    border-radius: 50%;
+                    transition: transform 0.5s ease;
+                    font-weight: bold;
+                    &:hover{
+                        cursor: pointer;
+                        transform: scale(1.1);
+                    }
+                }
+          
+            }
+
+            &-suppr{
+                // border: 1px solid black;
+                form{
+                    border: 1px solid black;
+                }
+                &-btn{
+                    margin-bottom:20px ;
+
+                    button{
+                        border-radius: 5px;
+                        border: 1px solid black;
+                    }
+                }
+            }
+        }
+    }
+
+
+}

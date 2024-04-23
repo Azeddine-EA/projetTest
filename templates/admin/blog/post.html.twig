@@ -1,0 +1,25 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Article ADMIN
+{% endblock title %}
+
+{% block body %}
+
+    <h1>Article</h1>
+
+    <article>
+        <h2>{{ post.title }}</h2>
+        <p>{{ post.content }}</p>
+        <p>{{ post.author.fullName }}</p>
+        <time> {{ post.publishedAt | date('d/m/Y H:i:s', 'Europe/Paris') }}  </time>
+        <p>
+            <a href="">Modifier</a>
+        </p>
+        <p>
+            <a href="">Modifier</a>
+        </p>
+    </article>
+
+
+{% endblock body %}

@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+
+    supprimer
+
+{% endblock %}
+
+{% block body %}
+<div class="container">
+    <h1> Supprimer un Post </h1>
+    <p> Êtes vous sur de vouloir supprimer le post ?  </p>
+    <div class="container_form-suppr">
+    <form action="">
+            <h2>{{post.title}}</h2>
+            <p>{{post.slug}}</p>
+            <p>{{post.summary}}</p>
+            <p>{{post.content}}</p>
+            <div class="container_form-suppr-btn">
+                <button type="submit">Supprimer</button>
+                <button ><a href="{{ path('admin_blog_index', { 'id': post.id }) }}"/></a>Annuler</button>
+            </div>
+    </form>
+    </div>
+</div>
+
+
+{% endblock %}

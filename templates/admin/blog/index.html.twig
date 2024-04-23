@@ -1,0 +1,40 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}
+    Acceuil admin
+{% endblock %}
+
+{% block body %}
+    <div class='container'>
+    
+        <h1>POSTS ADMIN</h1>  
+
+        <div class='container_post-admin' >
+                <div class="table">
+                    {% for post in posts %}
+                    <div class="my_row">
+                        <div class="cell">
+                            {{ post.title | capitalize }}
+                        </div>
+                        <div class="cell">
+                            {{post.publishedAt | date('d/m/Y H:i:s' , "Europe/Paris")}}
+                        </div>
+                        <div class="cell">
+                            <a href="{{ path('admin_blog_show', { 'id': post.id }) }}"/> Voir le post  </a>
+                        </div>
+                        <div class="cell">
+                            <a href="{{ path('admin_blog_edit', { 'id': post.id }) }}"/>modifier</a>
+                        </div>
+                        <div class="cell">
+                            <a href="{{ path('admin_blog_suppr', { 'id': post.id }) }}"/>supprimer</a>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <button>
+                    <a href="{{ path('admin_blog_new') }}"/>Ajouter un Post</a>
+                </button>
+        </div>
+
+    </div>
+{% endblock %}

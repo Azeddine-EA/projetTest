@@ -1,0 +1,120 @@
+body {
+  background-color: rgb(245, 245, 245);
+}
+body .container {
+  text-align: center;
+}
+body .container_post {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+body .container_post article {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  border: 1px solid black;
+  padding-bottom: 20px;
+  margin: 30px;
+  border-radius: 5px;
+}
+body .container_post article h2 {
+  font-size: 26px;
+}
+body .container_post-admin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+body .container_post-admin .table {
+  display: table;
+  border-collapse: collapse;
+  box-shadow: 0 0 1.5rem gray;
+}
+body .container_post-admin .table .my_row {
+  display: table-row;
+  border-bottom: 1px solid rgb(92, 92, 92);
+  border-radius: 5px;
+}
+body .container_post-admin .table .my_row .cell {
+  display: table-cell;
+  padding: 1rem;
+}
+body .container_post-admin .table .my_row:last-of-type {
+  border-width: 0;
+}
+body .container_post-admin button {
+  padding: 10px;
+  background-color: gray;
+  margin-top: 50px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+body .container_post-admin button a {
+  color: white;
+  text-decoration: none;
+}
+body .container_form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+body .container_form form {
+  width: 550px;
+  height: 750px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+  border-radius: 5px;
+  background-color: white;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.397);
+}
+body .container_form form label {
+  display: none;
+}
+body .container_form form label:first-child {
+  display: block;
+}
+body .container_form form input, body .container_form form textarea {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  border-left: 0;
+  border-right: 0;
+  border-top: 0;
+  border-bottom: 2px solid black;
+  width: 250px;
+  padding: 10px;
+}
+body .container_form form input:focus, body .container_form form textarea:focus {
+  outline: none;
+}
+body .container_form form button {
+  width: 80px;
+  height: 80px;
+  background-color: rgba(151, 151, 149, 0.945);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  transition: transform 0.5s ease;
+  font-weight: bold;
+}
+body .container_form form button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+}
+body .container_form-suppr form {
+  border: 1px solid black;
+}
+body .container_form-suppr-btn {
+  margin-bottom: 20px;
+}
+body .container_form-suppr-btn button {
+  border-radius: 5px;
+  border: 1px solid black;
+}/*# sourceMappingURL=style.css.map */
