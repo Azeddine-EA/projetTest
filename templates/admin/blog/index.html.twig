@@ -23,10 +23,10 @@
                             <a href="{{ path('admin_blog_show', { 'id': post.id }) }}"/> Voir le post  </a>
                         </div>
                         <div class="cell">
-                            <a href="{{ path('admin_blog_edit', { 'id': post.id }) }}"/>modifier</a>
+                            <a href="{{ path('admin_blog_edit', { 'id': post.id }) }}"/>Modifier</a>
                         </div>
                         <div class="cell">
-                            <a href="{{ path('admin_blog_suppr', { 'id': post.id }) }}"/>supprimer</a>
+                            <a href='{{ path('admin_blog_suppr', { 'id': post.id }) }}'>Supprimer</a>
                         </div>
                     </div>
                     {% endfor %}

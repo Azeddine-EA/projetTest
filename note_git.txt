@@ -1,0 +1,8 @@
+dans le terminale
+     git status : permet de voir le status
+     git add . : permet de ajouter les ficier
+     git commit -m "created and trying a method suppr " : permet de faire une sauvegarde avec un commentaire
+     git -M branch main
+     git branch : permet de voir dans quel branch on est
+     git branch main 
+     git checkout main : permet de changer de branch

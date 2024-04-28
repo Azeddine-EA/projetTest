@@ -141,19 +141,14 @@ final class BlogController extends AbstractController
     #[Route("/suppr/{id<\d+>}", name: 'suppr', methods : ['GET','Post'])]
     public function suppr(Post $post, PostRepository $postRepository, EntityManagerInterface $emPost, Request $request)
     {
+        $posts = $postRepository->findAll();
         $post = $postRepository->find($post->getId());
         // dd($post);
-        $form = $this->createForm(PostType::class, $post);
-        $form->handleRequest($request);
-        if($form->isSubmitted())
-        {
-            $emPost->remove($post);
-            $emPost->flush();
-            return $this->redirectToRoute('admin_blog_index', status: Response::HTTP_SEE_OTHER);
-        }
-        return $this->render('admin/blog/suppr.html.twig', [
-            'form' => $form,
-            'post' => $post,
+        $emPost->remove($post);
+        $emPost->flush();
+
+        return $this->redirectToRoute('admin_blog_index', [
+            'posts' => $posts,
         ]);
     }
 }
